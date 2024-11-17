@@ -1,0 +1,17 @@
+diff --git a/dist/index.js b/dist/index.js
+index 2ef84e43e5c730da383c87cb892ae773be61834f..2901413e7d9fbd07fa8f37e6b2e82cf9d45da321 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -232,9 +232,9 @@ function semverLite(required, toCheck) {
+     return rMajor === cMajor && rMinor === cMinor && rPatch === cPatch;
+ }
+ function warnIfInvalidPeerDependency(pkg, required, toCheck) {
+-    if (!semverLite(required, toCheck)) {
+-        console.warn(`!!!WARNING::: ${pkg} requires "uploadthing@${required}", but version "${toCheck}" is installed`);
+-    }
++    // if (!semverLite(required, toCheck)) {
++    //     console.warn(`!!!WARNING::: ${pkg} requires "uploadthing@${required}", but version "${toCheck}" is installed`);
++    // }
+ }
+ const getRequestUrl = (req)=>Micro.gen(function*() {
+         const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host");

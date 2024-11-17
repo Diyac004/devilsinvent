@@ -70,3 +70,28 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.zen-dots-regular {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@keyframes glitter-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-border {
+  position: relative;
+  display: inline-block;
+  background-size: 300% 300%;
+  border-image-source: linear-gradient(45deg,  #535a8c, #0e143d, #7981b8, #4e526b, #7f84a3, #5b6cd9);
+  border-image-slice: 1;
+  animation: glitter-border 3s infinite;
+}
